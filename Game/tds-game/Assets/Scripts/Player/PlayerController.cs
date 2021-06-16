@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float _speed;
     [SerializeField] private Camera _cam;
 
     private Rigidbody2D _rb;
     private Vector2 _moveVelocity;
     private Vector2 _mousePos;
+    public float Speed { get; set; }
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 _moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        _moveVelocity = _moveInput.normalized * _speed;
+        _moveVelocity = _moveInput.normalized * Speed;
 
         _mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
     }
