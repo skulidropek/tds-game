@@ -7,6 +7,10 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform _firePoint;
     [SerializeField] private GameObject _bulletObj;
     [SerializeField] private float _bulletForce;
+    //[SerializeField] private LayerMask _maskIsSolid;
+    // private int _distance = 2;
+
+
 
     private void Update()
     {
