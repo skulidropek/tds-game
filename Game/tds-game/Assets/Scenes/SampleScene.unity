@@ -486,7 +486,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.016666668
+  m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 1
   m_NavMeshData: {fileID: 23800000, guid: 3d3d006234ce316488aa0a4ea696e83a, type: 2}
@@ -8615,7 +8615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 10
-  _speed: 3
+  _speed: 5
 --- !u!114 &1705214536
 MonoBehaviour:
   m_ObjectHideFlags: 0

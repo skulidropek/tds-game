@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    //[SerializeField] private 
+    [SerializeField] private int _damage;
     private void Update()
     {
         Destroy(gameObject, 1f);
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         if (collision.CompareTag("Spawner"))
         {
             Spawner spawner = collision.GetComponent<Spawner>();
-            spawner.TakeDamage(3);
+            spawner.TakeDamage(_damage);
         }
         Destroy(gameObject);
     }
