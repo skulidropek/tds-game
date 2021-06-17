@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 29.2
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -486,9 +486,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.016666668
   m_BuildHeightMesh: 0
-  m_HideEditorLogs: 0
+  m_HideEditorLogs: 1
   m_NavMeshData: {fileID: 23800000, guid: 3d3d006234ce316488aa0a4ea696e83a, type: 2}
 --- !u!4 &537802579
 Transform:
@@ -8485,6 +8485,7 @@ MonoBehaviour:
   _firePoint: {fileID: 23115237}
   _bulletObj: {fileID: 1990747008604146034, guid: 9f351c5db266de94dbdf8225087c974b, type: 3}
   _bulletForce: 25
+  _cooldown: 0.3
 --- !u!58 &1705214530
 CircleCollider2D:
   m_ObjectHideFlags: 0
