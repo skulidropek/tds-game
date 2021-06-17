@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _obj;
+    [SerializeField] private int _spawnCount;
     [SerializeField] private float _cooldown;
     [SerializeField] private int _health;
 
@@ -13,7 +14,8 @@ public class Spawner : MonoBehaviour
     {
         if (_timer <= 0)
         {
-            Instantiate(_obj, transform.position, transform.rotation);
+            for (int i = 0; i < _spawnCount; i++)
+                Instantiate(_obj, transform.position, transform.rotation);
             _timer = _cooldown;
         }
         else

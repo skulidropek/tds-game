@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
             if(_reloadTime <= 0)
             {
                 Player player = collision.gameObject.GetComponent<Player>();
-                player.TakeDamage(1);
+                player.TakeDamage(_damage);
                 _reloadTime = _cooldown;
             }
             else

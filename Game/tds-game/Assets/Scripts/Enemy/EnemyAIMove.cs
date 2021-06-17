@@ -19,6 +19,9 @@ public class EnemyAIMove : MonoBehaviour
 
     private void Update()
     {
-        _agent.SetDestination(_playerPos.position);
+        if (_playerPos != null)
+        {
+            _agent.SetDestination(_playerPos.position);
+        }
     }
 }
