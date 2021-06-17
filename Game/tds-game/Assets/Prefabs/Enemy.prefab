@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 9
   _damage: 1
-  _speed: 2
+  _speed: 1.5
   _cooldown: 1
 --- !u!195 &-8449087426864233311
 NavMeshAgent:
