@@ -33,7 +33,6 @@ public class PlayerLevelSystem : MonoBehaviour
         }
 
         Wipe = Lvl >= 10;
-        Debug.Log($"{Wipe}");
 
         _lvlText.text = Lvl.ToString();
         _expText.text = $"{Exp}/{ExpNextLvl}";
