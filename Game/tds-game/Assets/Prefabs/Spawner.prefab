@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obj: {fileID: 5520865660277690247, guid: 63306fa2016105d4a8fcbead56e9e574, type: 3}
-  _spawnCount: 3
-  _cooldown: 3
+  _spawnCount: 4
+  _cooldown: 2
   _health: 50
