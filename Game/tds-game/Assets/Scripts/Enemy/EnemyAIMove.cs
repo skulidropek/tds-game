@@ -11,7 +11,8 @@ public class EnemyAIMove : MonoBehaviour
     private void Start()
     {
         _playerPos = GameObject.Find("Player").GetComponent<Transform>();
-        _agent = GetComponent <NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
+
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
     }
