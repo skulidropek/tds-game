@@ -5,13 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private int _damage;
-    private void Update()
-    {
-        Destroy(gameObject, 1f);
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
