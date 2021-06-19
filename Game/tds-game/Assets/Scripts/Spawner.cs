@@ -6,20 +6,29 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _obj;
     [SerializeField] private int _spawnCount;
-    [SerializeField] private float _cooldown;
+    [SerializeField] private float _cooldownRespawn;
+    [SerializeField] private float _cooldownSpawn;
+    [SerializeField] private float _cooldownDespawn;
     [SerializeField] private int _health;
 
-    private float _timer;
+    private float _timerRespawn;
+    private float _timerSpawn;
     private void Update()
     {
-        if (_timer <= 0)
+        if (_timerSpawn >= _cooldownSpawn && _timerSpawn <= _cooldownDespawn)
         {
-            for (int i = 0; i < _spawnCount; i++)
-                Instantiate(_obj, transform.position, transform.rotation);
-            _timer = _cooldown;
+            if(_timerRespawn <= 0)
+            {
+                for (int i = 0; i < _spawnCount; i++)
+                    Instantiate(_obj, transform.position, transform.rotation);
+                _timerRespawn = _cooldownRespawn;
+            }
+            else
+            {
+                _timerRespawn -= Time.deltaTime;
+            }
         }
-        else
-            _timer -= Time.deltaTime;
+        _timerSpawn += Time.deltaTime;
     }
 
     private void FixedUpdate()
