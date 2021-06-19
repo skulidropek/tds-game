@@ -8,6 +8,7 @@ public class PlayerUpgrade : MonoBehaviour
     private void Start()
     {
         LevelSystem = GetComponent<PlayerLevelSystem>();
+        //ss
     }
 
     private void Update()
