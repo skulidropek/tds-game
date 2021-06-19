@@ -12532,7 +12532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.79244, y: -0.2699992, z: -10}
+  m_LocalPosition: {x: -34.767067, y: -0.2699992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1744115880}
@@ -52585,7 +52585,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.02
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000072c08c7cfbad0441fce4683
   m_LightCookieSprite: {fileID: 0}
@@ -52790,7 +52790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c96d98202f72b41981c06367135c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _range: 6.2
+  _range: 4.47
   _bulletForce: 25
   _light: {fileID: 1017922277}
   _firePoint: {fileID: 156662669}
@@ -52854,7 +52854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236128563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.98, y: -0.76, z: 0}
+  m_LocalPosition: {x: -25.28, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 156662669}

@@ -5,32 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _health;
+    [SerializeField] private int _healthMax;
     [SerializeField] private float _speed;
+    [SerializeField] private HealthBar _healthBar;
 
     private static PlayerController controler;
     private static PlayerLevelSystem levelSystem;
     private static PlayerShooting shooting;
 
+    private int _health;
+
     public void Start()
     {
+        _health = _healthMax;
         controler = GetComponent<PlayerController>();
         levelSystem = GetComponent<PlayerLevelSystem>();
         shooting = GetComponent<PlayerShooting>();
-
+        _healthBar.SetMaxHealth(_healthMax);
     }
 
     private void Update()
     {
-        controler.Speed = _speed;
+        _healthBar.SetHealth(_health);
 
-        if (levelSystem.Wipe)
-        {
-            _speed *= 2;
-            Debug.Log("Ваша скорость x2");
-            levelSystem.Wipe = false;
-            levelSystem.DataClear();
-        }
+        controler.Speed = _speed;
 
         if (IsDead())
         {

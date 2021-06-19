@@ -23,14 +23,12 @@ public class Turret : MonoBehaviour
     private void Update()
     {
         _direction = _firePoint.transform.position;
-    }
 
-    private void FixedUpdate()
-    {
         RaycastHit2D _hit = Physics2D.CircleCast(transform.position, _range, _direction);
 
         if (_hit.collider != null)
         {
+            Debug.Log(_hit.collider);
             if (_hit.collider.tag == "Enemy")
             {
                 _targetPos = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>().position;
